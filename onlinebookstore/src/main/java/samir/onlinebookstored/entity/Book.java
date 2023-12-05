@@ -56,4 +56,10 @@ public class Book {
 	
 	//add setters and getters
 	//if you are not using lombok
+//	public void insertData(String name ,String description){
+//
+//		String q="insert into book(name,description) values(?,?)";
+//		this.jdbcTemplate.update(q,name,description);
+//		System.out.println(update+"rows added");
+//	}
 }

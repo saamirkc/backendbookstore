@@ -12,7 +12,7 @@ import javax.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name="tbl_state")
+@Table
 @Data
 public class State {
 

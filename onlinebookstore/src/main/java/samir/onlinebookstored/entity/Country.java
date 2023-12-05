@@ -16,7 +16,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name="tbl_country")
+@Table
 @Getter
 @Setter
 public class Country {
