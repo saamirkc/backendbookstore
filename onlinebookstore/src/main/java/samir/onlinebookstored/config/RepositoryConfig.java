@@ -1,4 +1,4 @@
-package in.bushansirgur.onlinebookstore.config;
+package samir.onlinebookstored.config;
 
 import javax.persistence.EntityManager;
 import javax.persistence.metamodel.Type;

@@ -1,4 +1,4 @@
-package in.bushansirgur.onlinebookstore.entity;
+package samir.onlinebookstored.entity;
 
 import java.math.BigDecimal;
 import java.util.Date;
