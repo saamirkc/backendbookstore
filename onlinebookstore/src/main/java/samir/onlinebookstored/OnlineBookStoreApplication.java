@@ -48,25 +48,25 @@ public class OnlineBookStoreApplication implements CommandLineRunner  {
 //			System.out.println(user1.getUsername());
 //
 //////
-			User user= new User();
-  user.setFirstName("samir");
-  user.setLastName("karki");
-  user.setUsername("samir777");
-//  user.setPassword("abc");
-  user.setPassword(this.bCryptPasswordEncoder.encode("abc"));
-  user.setEmail("sam.777@gmail.com");
-  user.setProfile("default.png");
-  user.setPhone("+9779810277015");
-        Role role =new Role();
-        role.setRoleId(9L);
-        role.setRoleName("ADMIN");
-        Set<UserRole> userRoleSet=new HashSet<>();
-        UserRole userRole=new UserRole();
-        userRole.setRole(role);
-        userRole.setUser(user);
-        userRoleSet.add(userRole);
-        User user1=this.userService.createUser(user,userRoleSet);
-        System.out.println(user1.getUsername());
+//			User user= new User();
+//  user.setFirstName("samir");
+//  user.setLastName("karki");
+//  user.setUsername("samir777");
+////  user.setPassword("abc");
+//  user.setPassword(this.bCryptPasswordEncoder.encode("abc"));
+//  user.setEmail("sam.777@gmail.com");
+//  user.setProfile("default.png");
+//  user.setPhone("+9779810277015");
+//        Role role =new Role();
+//        role.setRoleId(9L);
+//        role.setRoleName("ADMIN");
+//        Set<UserRole> userRoleSet=new HashSet<>();
+//        UserRole userRole=new UserRole();
+//        userRole.setRole(role);
+//        userRole.setUser(user);
+//        userRoleSet.add(userRole);
+//        User user1=this.userService.createUser(user,userRoleSet);
+//        System.out.println(user1.getUsername());
 
 		}
 
