@@ -172,7 +172,7 @@ VALUES
     'RabbitMQ in Depth is a practical guide to building and maintaining message-based applications. This book provides detailed',
     'assets/images/webdevelopment/webdevelopment-105.jpg',
     1,
-    100,
+    100,springbootapps
     500.00,
     1, 
     NOW()

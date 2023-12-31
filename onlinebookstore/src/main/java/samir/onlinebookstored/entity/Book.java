@@ -12,6 +12,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -27,7 +28,7 @@ public class Book {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
-	private String sku;
+	private String stockKeepingUnit;
 	
 	private String name;
 	
@@ -52,14 +53,8 @@ public class Book {
 
 	@ManyToOne
 	@JoinColumn(name="category_id", nullable=false)
+	@JsonBackReference
 	private BookCategory category;
-	
-	//add setters and getters
-	//if you are not using lombok
-//	public void insertData(String name ,String description){
-//
-//		String q="insert into book(name,description) values(?,?)";
-//		this.jdbcTemplate.update(q,name,description);
-//		System.out.println(update+"rows added");
-//	}
+
+
 }

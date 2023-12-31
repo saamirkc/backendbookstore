@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -30,6 +31,7 @@ public class BookCategory {
 	private String categoryName;
 	
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="category")
+	@JsonManagedReference
 	private Set<Book> book;
 	
 	//add setters and getters

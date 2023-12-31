@@ -55,22 +55,22 @@ public class AuthenticationController {
         }
 
     }
-    @GetMapping("/current-user")
-    public User getCurrentUser(Principal principal){
-
-            return ((User) this.userDetailsService.loadUserByUsername(principal.getName()));
-        }
-//
 //    @GetMapping("/current-user")
-//    public User getCurrentUser(Principal principal) {
-//        if (principal != null) {
+//    public User getCurrentUser(Principal principal){
+//
 //            return ((User) this.userDetailsService.loadUserByUsername(principal.getName()));
-//        } else {
-//            // Handle the case where principal is null
-//            // You might want to return an error response or take alternative actions
-//            return null; // or throw an exception or return a default user
 //        }
-//    }
+
+    @GetMapping("/current-user")
+    public User getCurrentUser(Principal principal) {
+        if (principal != null) {
+            return ((User) this.userDetailsService.loadUserByUsername(principal.getName()));
+        } else {
+            // Handle the case where principal is null
+            // You might want to return an error response or take alternative actions
+            return null; // or throw an exception or return a default user
+        }
+    }
 
 
 }
