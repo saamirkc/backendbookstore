@@ -33,7 +33,10 @@ public class BookCategory {
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="category")
 	@JsonManagedReference
 	private Set<Book> book;
-	
+
+	public BookCategory() {
+	}
+
 	//add setters and getters
 	//if you are not using lombok
 	

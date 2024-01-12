@@ -1,6 +1,7 @@
 package samir.onlinebookstored.Seervice;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import samir.onlinebookstored.entity.Book;
 import samir.onlinebookstored.repository.BookRepository;
@@ -35,4 +36,5 @@ public class BookServiceImpl implements BookService{
     public void deleteBook(Long bookId) {
 this.bookRepository.deleteById(bookId);
     }
+
 }
