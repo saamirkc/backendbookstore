@@ -1,6 +1,7 @@
 package samir.onlinebookstored.entity;
 
 import java.math.BigDecimal;
+import java.sql.Blob;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -12,6 +13,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.core.io.Resource;
 
 @Entity
 @Table(name="tbl_book")
@@ -37,6 +39,9 @@ public class Book {
 	@Column(name="image_url")
 	private String imageUrl;
 
+
+    @Lob
+	private Resource profileImage;
 
 	private boolean active;
 

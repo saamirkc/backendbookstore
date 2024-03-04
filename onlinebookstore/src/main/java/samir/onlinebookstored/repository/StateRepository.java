@@ -10,6 +10,6 @@ import samir.onlinebookstored.entity.State;
 
 @RepositoryRestResource
 public interface StateRepository extends JpaRepository<State, Long>{
-	
+
 	List<State> findByCountryCode(@Param("code") String code);
 }

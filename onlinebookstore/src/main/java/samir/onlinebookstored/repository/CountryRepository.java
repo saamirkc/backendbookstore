@@ -7,6 +7,6 @@ import samir.onlinebookstored.entity.Country;
 
 @RepositoryRestResource(collectionResourceRel = "countries", path = "countries")
 public interface CountryRepository extends JpaRepository<Country, Long>{
-	
-	
+
+
 }
