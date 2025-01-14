@@ -21,9 +21,10 @@ public class BookCategoryController {
 
     @GetMapping("/{categoryId}")
     public BookCategory getCategory(@PathVariable("categoryId")Long categoryId){
-        System.out.println("imhit");
-//        return this.categoryService.getCategory(categoryId);
-        return null;
+        return this.categoryService.getCategory(categoryId);
+//        System.out.println("imhit");
+////        return this.categoryService.getCategory(categoryId);
+//        return null;
     }
     //get all categories
     @GetMapping("/")

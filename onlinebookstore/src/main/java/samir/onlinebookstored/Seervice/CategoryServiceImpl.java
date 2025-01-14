@@ -39,27 +39,31 @@ public class CategoryServiceImpl implements CategoryService{
         return new HashSet<>(this.bookCategoryRepository.findAll());
     }
 
-    @Override
-    public BookCategory getCategory(Long categoryId) {
-        BookCategory bookCategories = this.bookCategoryRepository.findById(categoryId).get();
-// for loop in book category
-        for (Book book : bookCategories.getBook()) {
-
-
-            // Load the file resource using ResourceLoader
-            Resource file = resourceLoader.getResource("file:" + uploadDirectory + File.separator + book.getImageUrl());
-
-            if (file.exists() && file.isReadable()) {
-                book.setProfileImage(file);
-
-
-            }
-        }
-        System.out.println("this is the book");
-        System.out.println(bookCategories.getBook().toString());
-        System.out.println("this is the book");
-        return bookCategories;
-    }
+//    @Override
+//    public BookCategory getCategory(Long categoryId) {
+//        BookCategory bookCategories = this.bookCategoryRepository.findById(categoryId).get();
+//// for loop in book category
+//        for (Book book : bookCategories.getBook()) {
+//
+//
+//            // Load the file resource using ResourceLoader
+//            Resource file = resourceLoader.getResource("file:" + uploadDirectory + File.separator + book.getImageUrl());
+//
+//            if (file.exists() && file.isReadable()) {
+//                book.setProfileImage(file);
+//
+//
+//            }
+//        }
+//        System.out.println("this is the book");
+//        System.out.println(bookCategories.getBook().toString());
+//        System.out.println("this is the book");
+//        return bookCategories;
+//    }
+@Override
+public BookCategory getCategory(Long categoryId) {
+    return this.bookCategoryRepository.findById(categoryId).get();
+}
     @Override
     public void deleteCategory(Long categoryId) {
         BookCategory bookCategory=new BookCategory();
